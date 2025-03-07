@@ -9,6 +9,7 @@ alias ll='ls -lahF'
 alias lls='ls -lahFtr'
 alias la='ls -A'
 alias lc='ls -CF'
+alias tree="ls --tree"
 
 # zoxide
 alias zz='z -'

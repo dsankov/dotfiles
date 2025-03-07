@@ -72,8 +72,10 @@ fi
 # +---------+
 # | SCRIPTS |
 # +---------+
+if [[ -e $ZDOTDIR/scripts.zsh ]]; then
+  source $ZDOTDIR/scripts.zsh
+fi
 
-source $DOTFILES/zsh/scripts.zsh
 eval "$(zoxide init zsh)"
 eval "$(atuin init zsh)"
 zinit light zsh-users/zsh-autosuggestions
