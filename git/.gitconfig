@@ -1,0 +1,8 @@
+
+[init]
+	defaultBranch = master
+[user]
+	email = Dmitry.Sankov@gmail.com
+	name = Dmitry Sankov
+[core]
+	quotepath = false
