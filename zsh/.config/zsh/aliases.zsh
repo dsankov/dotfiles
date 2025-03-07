@@ -11,9 +11,12 @@ alias la='ls -A'
 alias lc='ls -CF'
 alias tree="ls --tree"
 
+
 # zoxide
 alias zz='z -'
 
+# git
+alias lg="lazygit"
 
 install() {
   local package
