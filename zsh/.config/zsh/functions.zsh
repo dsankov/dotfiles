@@ -1,4 +1,22 @@
 # functions.zsh - Custom functions
+# Yazi file manager wrapper
+function y() {
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+  yazi "$@" --cwd-file="$tmp"
+  if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+    builtin cd -- "$cwd"
+  fi
+  rm -f -- "$tmp"
+}
+
+# Package installation with fzf
+function install() {
+  local package
+  package=$(pamac search "$1" --quiet | awk '{print $1}' | fzf --prompt="Select package: " --height=40% --border --layout=reverse --preview="pamac info {1}")
+  [[ -n "$package" ]] && pamac install "$package"
+}
+
+
 
 # Set terminal window and tab/icon title
 function title {
@@ -31,22 +49,6 @@ function title {
   esac
 }
 
-# Yazi file manager wrapper
-function y() {
-  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-  yazi "$@" --cwd-file="$tmp"
-  if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-    builtin cd -- "$cwd"
-  fi
-  rm -f -- "$tmp"
-}
-
-# Package installation with fzf
-function install() {
-  local package
-  package=$(pamac search "$1" --quiet | awk '{print $1}' | fzf --prompt="Select package: " --height=40% --border --layout=reverse --preview="pamac info {1}")
-  [[ -n "$package" ]] && pamac install "$package"
-}
 
 # URL-encode a string
 function zsh_urlencode() {
