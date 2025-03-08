@@ -33,3 +33,4 @@ zinit light-mode for \
 
 
 ### End of Zinit's installer chunk
+
