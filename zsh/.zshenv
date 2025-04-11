@@ -5,7 +5,7 @@
 ###############################
 
 export TERM='rxvt-256color'
-export DOTFILES="$HOME/.dotfiles"
+export DOTFILES="$HOME/dotfiles"
 export WORKSPACE="$HOME/workspace"
 
 [ -f "$DOTFILES/install_config" ] && source "$DOTFILES/install_config"
