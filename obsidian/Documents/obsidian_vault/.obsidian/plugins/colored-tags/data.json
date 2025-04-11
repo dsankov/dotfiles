@@ -1,0 +1,32 @@
+{
+  "palette": {
+    "seed": 0,
+    "selected": "adaptive-soft",
+    "custom": "e12729-f37324-f8cc1b-72b043-007f4e"
+  },
+  "mixColors": true,
+  "transition": true,
+  "accessibility": {
+    "highTextContrast": false
+  },
+  "knownTags": {
+    "зависимость": 1,
+    "Придумка": 2,
+    "желания": 3,
+    "Тоня": 4,
+    "обиды": 5,
+    "радости": 6,
+    "огорчения": 7,
+    "Мама": 8,
+    "fastapi": 9,
+    "ricing": 10,
+    "fish": 11,
+    "database": 12,
+    "manjaro": 13,
+    "driver": 14,
+    "dotfiles": 15,
+    "ricing/system": 1,
+    "clippings": 16
+  },
+  "_version": 3
+}

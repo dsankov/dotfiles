@@ -27,6 +27,10 @@ source "$ZDOTDIR/aliases.zsh"
 source "$ZDOTDIR/functions.zsh"
 source "$ZDOTDIR/theme.zsh"
 
+zle_highlight=('paste:none')
+setopt interactive_comments
+
+
 # Initialize tools
 eval "$(zoxide init zsh)"
 eval "$(atuin init zsh --disable-ctrl-r)"

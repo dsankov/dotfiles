@@ -1,0 +1,57 @@
+{
+  "token": "892ec952-9a3c-4b31-be93-7bf322511326",
+  "projects": [
+    {
+      "id": "6040ba0b48ca8fd45b29b56d",
+      "name": "страховки",
+      "sortOrder": -962072674304,
+      "viewMode": "list",
+      "permission": "write",
+      "kind": "TASK"
+    },
+    {
+      "id": "6179d2b848ca7a852e561759",
+      "name": "заметки",
+      "sortOrder": -824633720833,
+      "permission": "write",
+      "kind": "NOTE"
+    },
+    {
+      "id": "6179d5d748ca7a852e5618ac",
+      "name": "дневник",
+      "color": "#731B63",
+      "sortOrder": -1099511627777,
+      "closed": false,
+      "permission": "write",
+      "kind": "NOTE"
+    },
+    {
+      "id": "61921d8648ca379a69d2e46c",
+      "name": "Занятия",
+      "sortOrder": -1374389534721,
+      "closed": false,
+      "permission": "write",
+      "kind": "TASK"
+    },
+    {
+      "id": "6239907948ca5fb220373c54",
+      "name": "ремонт и улучшения",
+      "sortOrder": -1649267441665,
+      "closed": false,
+      "permission": "write",
+      "kind": "TASK"
+    },
+    {
+      "id": "67629ebce89c726819f6a4ab",
+      "name": "врачи",
+      "sortOrder": -1649267507201,
+      "viewMode": "list",
+      "permission": "write",
+      "kind": "NOTE"
+    }
+  ],
+  "avatarUrl": "https://profile-photo.s3.amazonaws.com/files/avatar/5831/MTE2NjM4Mjk3dXNoaGI2enI=/avatar.png?v=9fe3cb2b7313dc79bb477bc8fde184a7",
+  "name": "sirrotten@gmail.com",
+  "autoFetchData": true,
+  "login": true
+}
