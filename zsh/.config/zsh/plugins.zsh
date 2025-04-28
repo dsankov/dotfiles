@@ -1,29 +1,35 @@
-# plugins.zsh - Plugins configuration
+# plugins.zsh - Plugins configuration for Zimfw
 
-### Zinit initialization
-if [[ ! -f $XDG_DATA_HOME/zinit/zinit.git/zinit.zsh ]]; then
-    print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
-    command mkdir -p "$XDG_DATA_HOME/zinit" && command chmod g-rwX "$XDG_DATA_HOME/zinit"
-    command git clone https://github.com/zdharma-continuum/zinit "$XDG_DATA_HOME/zinit/zinit.git" && \
-        print -P "%F{33} %F{34}Installation successful.%f%b" || \
-        print -P "%F{160} The clone has failed.%f%b"
+# Zimfw initialization
+if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
+  # Download zimfw script if missing
+  curl -fsSL --create-dirs -o ${ZIM_HOME}/zimfw.zsh \
+      https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh
 fi
 
-source "$XDG_DATA_HOME/zinit/zinit.git/zinit.zsh"
-autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
+# Initialize zimfw
+if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
+  source ${ZIM_HOME}/zimfw.zsh init -q
+fi
 
-# Load important annexes
-zinit light-mode for \
-    zdharma-continuum/zinit-annex-as-monitor \
-    zdharma-continuum/zinit-annex-bin-gem-node \
-    zdharma-continuum/zinit-annex-patch-dl \
-    zdharma-continuum/zinit-annex-rust
+# Module configuration
+# Zimfw comes with many built-in modules (see https://github.com/zimfw/zimfw/wiki/Modules)
+# We'll enable the ones that match your current plugins:
 
-# Load plugins
-zinit light zsh-users/zsh-autosuggestions
-zinit light zdharma-continuum/fast-syntax-highlighting
-zinit snippet OMZP::git
-zinit snippet OMZP::sudo
-zinit light Aloxaf/fzf-tab
-zinit ice depth=1; zinit light romkatv/powerlevel10k
+# Built-in modules that replace your Zinit plugins:
+zmodule zsh-users/zsh-autosuggestions
+zmodule zdharma-continuum/fast-syntax-highlighting
+zmodule romkatv/powerlevel10k --use degit
+
+# Additional modules you might want:
+zmodule archive
+zmodule git
+zmodule input
+zmodule termtitle
+zmodule utility
+
+# FZF tab completion (not built into Zimfw)
+zmodule Aloxaf/fzf-tab
+
+# Initialize Zimfw
+source ${ZIM_HOME}/init.zsh
