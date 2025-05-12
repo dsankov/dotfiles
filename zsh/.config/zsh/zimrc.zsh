@@ -16,12 +16,12 @@ zmodule utility
 # Exposes to prompts how long the last command took to execute, used by asciiship.
 zmodule duration-info
 # Exposes git repository status information to prompts, used by asciiship.
-zmodule git-info
+# zmodule git-info
 # A heavily reduced, ASCII-only version of the Spaceship and Starship prompts.
 # zmodule bira
 
 zmodule fzf
-zmodule direnv
+# zmodule direnv
 zmodule romkatv/powerlevel10k --use degit
 
 zmodule Aloxaf/fzf-tab
