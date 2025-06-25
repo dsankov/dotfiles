@@ -116,7 +116,7 @@
         //    "4": "blue",
         //    "5": "green"
         //}
-        "source": "~/.config/fastfetch/archpuccinn.png",
+        "source": "~/.config/fastfetch/endeavouros.png",
         "type": "kitty",
         "height": 16,
         "width": 34,
@@ -142,7 +142,9 @@
             "key": "│ ├󰍛CPU",
             "showPeCoreCount": true,
             "format": "{1}",
-            "keyColor": "green"
+            "keyColor": "#cba6f7",
+            "valueColor": "#b4befe"
+            // "keyColor": "green"
         },
         {
             "type": "gpu",

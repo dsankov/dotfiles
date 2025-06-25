@@ -1,0 +1,58 @@
+{
+  // "logo": {
+  //   "type": "auto",
+  //   "colors": [
+  //     "#f5e0dc", // rosewater
+  //     "#f38ba8", // red
+  //     "#fab387", // peach
+  //     "#a6e3a1", // green
+  //     "#89b4fa", // blue
+  //     "#cba6f7", // mauve
+  //     "#b4befe"  // lavender
+  //   ]
+  // },
+  // "d`isplay": {
+  //   "separator": ": ",
+  //   "color": "#cdd6f4", // text
+  //   "padding": 2
+  // },`
+  "modules": {
+    "title": {
+      "keyColor": "#89b4fa",
+      "valueColor": "#cdd6f4"
+    },
+    "os": {
+      "keyColor": "#fab387",
+      "valueColor": "#f9e2af"
+    },
+    "kernel": {
+      "keyColor": "#f38ba8",
+      "valueColor": "#a6adc8"
+    },
+    "uptime": {
+      "keyColor": "#94e2d5",
+      "valueColor": "#a6e3a1"
+    },
+    "cpu": {
+      "keyColor": "#cba6f7",
+      "valueColor": "#b4befe",
+      "type": "cpu",
+      "key": "│ ├󰍛CPU",
+      "showPeCoreCount": true,
+      "format": "{1}",
+      // "keyColor": "green"
+    },
+    "gpu": {
+      "keyColor": "#89dceb",
+      "valueColor": "#74c7ec"
+    },
+    "memory": {
+      "keyColor": "#f5c2e7",
+      "valueColor": "#f2cdcd"
+    },
+    "disk": {
+      "keyColor": "#eba0ac",
+      "valueColor": "#f5e0dc"
+    }
+  }
+}
