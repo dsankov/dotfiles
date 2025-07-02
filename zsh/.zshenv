@@ -25,3 +25,5 @@ export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 # Define Zim location
 export ZIM_CONFIG_FILE=~/.config/zsh/zimrc.zsh
 export ZIM_HOME=${XDG_DATA_HOME:-${HOME}/.local/share}/zim
+
+export BROWSER=zen

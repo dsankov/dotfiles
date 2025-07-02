@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#! python3
 from pydbus import SessionBus
 import json
 
@@ -9,26 +9,24 @@ proxy_gsconnect = session_bus.get(
 gsconnect = proxy_gsconnect[
     'org.freedesktop.DBus.ObjectManager']
 
-waybar = {'text': "", 'alt': "", "class": "GSdevices", "types": ""}
+waybar = {'text': "", 'tooltip': "", "class": "GSdevices", "types": ""}
 
-icons = {'smartphone-symbolic': "", "tablet-symbolic": "",
-         'tv-symbolic': "", 'computer-symbolic': ""}
+icons = {'smartphone-symbolic': "󰄜", "tablet-symbolic": "",
+         'tv-symbolic': "", 'computer-symbolic': ""}
 
 types = []
 devices = gsconnect.GetManagedObjects()
-
-
 for dev in devices:
     devinfo = devices[dev]['org.gnome.Shell.Extensions.GSConnect.Device']
     if devinfo['Connected']:
         if devinfo['Paired']:
             types.append(devinfo['Type'])
             waybar['text'] += icons[devinfo['IconName']] + ' '
-            waybar['alt'] += devinfo['Name'] + ' ' + icons[devinfo['IconName']] +'\n'
+            waybar['tooltip'] += devinfo['Name'] + '\n'
         if not devinfo['Paired']:
             types.append(devinfo['Type'])
             waybar['text'] += ' ' + ' '
-            waybar['alt'] += devinfo['Name'] + '\n'
+            waybar['tooltip'] += devinfo['Name'] + '\n'
 
 waybar['types'] = '+'.join(types)
 for key in waybar:
