@@ -25,6 +25,9 @@ zmodule fzf
 zmodule romkatv/powerlevel10k --use degit
 
 zmodule Aloxaf/fzf-tab
+zmodule git
+zmodule magic-enter
+zmodule ohmyzsh/ohmyzsh --root plugins/sudo
 
 #
 # Completion

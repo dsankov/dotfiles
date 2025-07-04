@@ -1,1 +1,0 @@
-dolphin --split --new-window
